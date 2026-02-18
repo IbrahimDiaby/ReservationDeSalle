@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: saloon_reservation
+  datasource:
+    url: jdbc:postgresql://localhost:5432/saloon_reservation
+    username: postgres
+    password: postgres
+    hikari:
+      maximum-pool-size: 30
