@@ -5,5 +5,17 @@ spring:
     url: jdbc:postgresql://localhost:5432/saloon_reservation
     username: postgres
     password: postgres
+    driver-class-name: org.postgresql.Driver
     hikari:
       maximum-pool-size: 30
+      minimum-idle: 10
+      idle-timeout: 600000
+      connection-timeout: 30000
+  jpa:
+    hibernate:
+      ddl-auto: update   # or validate / create / create-drop
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
